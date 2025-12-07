@@ -1,0 +1,54 @@
+@tailwind base;
+
+/* Selection highlight */
+::selection {
+  @apply bg-blue-500 text-white;
+}
+
+/* Headings */
+h1 {
+  @apply text-4xl font-bold my-4;
+}
+
+h2 {
+  @apply text-xl font-bold mb-4;
+}
+
+/* Responsive adjustment for h2 */
+@screen sm {
+  h2 {
+    @apply text-xl;
+  }
+}
+
+/* Paragraphs */
+p {
+  @apply mb-4;
+}
+
+/* Images */
+img {
+  @apply w-full rounded-[4px] mb-4;
+}
+
+img:hover {
+  animation: backout 1.5s ease-in-out;
+}
+
+/* Hover animation */
+@keyframes backout {
+  from {
+    filter: grayscale(1);
+  }
+  to {
+    filter: grayscale(0);
+  }
+}
+
+/* Navigation links */
+.nav-link {
+  @apply text-gray-700 hover:text-blue-600;
+}
+
+@tailwind components;
+@tailwind utilities;
